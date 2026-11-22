@@ -1,0 +1,347 @@
+/**
+ * Homepage Sections: Hero Slider, 4-Column Feature Strip, Latest Insights
+ */
+
+.aga-hero {
+	position: relative;
+	background-color: var(--aga-deep);
+	color: var(--aga-ivory);
+	overflow: hidden;
+}
+
+.aga-hero__track {
+	position: relative;
+	min-height: 430px;
+}
+
+.aga-hero__slide {
+	position: absolute;
+	inset: 0;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	transition: opacity 420ms ease, visibility 420ms ease;
+	display: flex;
+	align-items: center;
+}
+
+.aga-hero__slide.is-active {
+	position: relative;
+	min-height: 430px;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+	z-index: 1;
+}
+
+.aga-hero__media {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+}
+
+.aga-hero__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.aga-hero__scrim {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(
+		95deg,
+		rgba(11, 45, 35, 0.96) 0%,
+		rgba(18, 59, 46, 0.88) 64%,
+		rgba(11, 45, 35, 0.56) 100%
+	);
+}
+
+.aga-hero__content {
+	position: relative;
+	z-index: 2;
+	padding-block: 34px 68px;
+}
+
+.aga-hero__inner {
+	max-width: 600px;
+}
+
+.aga-hero__eyebrow {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 12px;
+	color: var(--aga-gold);
+	font-family: var(--aga-font-ui);
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.aga-hero__eyebrow-line {
+	display: inline-block;
+	width: 36px;
+	height: 1px;
+	background-color: var(--aga-gold);
+	flex-shrink: 0;
+}
+
+.aga-hero__title {
+	color: var(--aga-ivory);
+	font-size: clamp(1.85rem, 6.2vw, 3.15rem);
+	line-height: 1.14;
+	margin-bottom: 14px;
+	text-wrap: balance;
+}
+
+.aga-hero__title-accent {
+	color: var(--aga-gold);
+	display: inline;
+}
+
+.aga-hero__subtitle {
+	color: rgba(248, 245, 236, 0.92);
+	font-size: clamp(0.95rem, 2.5vw, 1.125rem);
+	line-height: 1.55;
+	max-width: 48ch;
+	margin-bottom: 22px;
+}
+
+.aga-hero__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.aga-hero__actions .aga-button--primary {
+	border-radius: 999px;
+}
+
+.aga-hero__controls-wrap {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 14px;
+	z-index: 4;
+	pointer-events: none;
+}
+
+.aga-hero__controls {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 14px;
+}
+
+.aga-hero__dots,
+.aga-hero__arrows {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	pointer-events: auto;
+}
+
+.aga-hero__dot {
+	width: 10px;
+	height: 10px;
+	padding: 0;
+	border: 0;
+	border-radius: 999px;
+	background-color: rgba(248, 245, 236, 0.42);
+	transition: width var(--aga-transition), background-color var(--aga-transition);
+}
+
+.aga-hero__dot.is-active {
+	width: 24px;
+	background-color: var(--aga-gold);
+}
+
+.aga-hero__arrow {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	border: 1px solid rgba(248, 245, 236, 0.42);
+	background-color: rgba(11, 45, 35, 0.56);
+	color: var(--aga-ivory);
+	backdrop-filter: blur(4px);
+}
+
+.aga-hero__arrow:hover {
+	background-color: var(--aga-forest);
+	border-color: var(--aga-gold);
+}
+
+/* 4-Column Feature Strip */
+.aga-feature-strip {
+	background-color: var(--aga-ivory);
+	border-bottom: 1px solid var(--aga-border);
+	padding-block: 14px;
+}
+
+.aga-feature-strip .aga-container {
+	padding-inline: 10px;
+}
+
+.aga-feature-strip__grid {
+	display: grid;
+	grid-template-columns: 0.92fr 0.84fr 1.34fr 0.9fr;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.aga-feature-strip__item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	text-align: center;
+	gap: 7px;
+	padding: 4px 3px;
+	position: relative;
+	min-width: 0;
+}
+
+.aga-feature-strip__item:not(:last-child)::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 12%;
+	bottom: 12%;
+	width: 1px;
+	background-color: var(--aga-border);
+}
+
+.aga-feature-strip__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--aga-forest);
+}
+
+.aga-feature-strip__label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 0.65rem;
+	font-weight: 600;
+	line-height: 1.28;
+	color: var(--aga-text);
+}
+
+.aga-feature-strip__label span {
+	display: block;
+	white-space: nowrap;
+}
+
+/* Latest Insights */
+.aga-latest-insights {
+	background-color: var(--aga-ivory);
+}
+
+.aga-insights-layout {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.aga-insights-layout__grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 16px;
+}
+
+.aga-article-card {
+	display: flex;
+	flex-direction: column;
+	transition: transform var(--aga-transition);
+}
+
+.aga-article-card:hover {
+	transform: translateY(-2px);
+}
+
+.aga-article-card__media {
+	position: relative;
+	background-color: var(--aga-sage);
+}
+
+.aga-article-card__image-link {
+	display: block;
+	overflow: hidden;
+}
+
+.aga-article-card__image {
+	width: 100%;
+	aspect-ratio: 16 / 10;
+	object-fit: cover;
+}
+
+.aga-article-card__badge {
+	position: absolute;
+	left: 16px;
+	bottom: -14px;
+	z-index: 2;
+	box-shadow: 0 4px 12px rgba(11, 45, 35, 0.1);
+}
+
+.aga-article-card__body {
+	padding: 26px 20px 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	flex: 1 1 auto;
+}
+
+.aga-article-card__title {
+	font-size: 1.25rem;
+	line-height: 1.3;
+	margin: 0;
+}
+
+.aga-article-card--featured .aga-article-card__title {
+	font-size: clamp(1.3rem, 4.4vw, 1.65rem);
+}
+
+.aga-article-card__title a {
+	text-decoration: none;
+	color: var(--aga-forest);
+}
+
+.aga-article-card__title a:hover {
+	color: var(--aga-gold);
+}
+
+.aga-article-card__excerpt {
+	color: var(--aga-muted);
+	font-size: 0.95rem;
+	margin: 0;
+}
+
+.aga-reading-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 14px;
+	font-size: 0.8125rem;
+	color: var(--aga-muted);
+	margin-top: auto;
+	font-variant-numeric: tabular-nums;
+}
+
+.aga-reading-meta__item {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+}
+
+.aga-reading-meta__item svg {
+	color: var(--aga-forest);
+	flex-shrink: 0;
+}

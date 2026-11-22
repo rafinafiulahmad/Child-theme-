@@ -1,0 +1,17 @@
+/*
+Theme Name:   AI Governance Academy Child
+Theme URI:    https://aigovernanceacademy.org/
+Description:  Production-ready Kadence child theme for AI Governance Academy (AGA). Design tokens, editorial templates, WooCommerce bookstore presentation, Tutor LMS visual styling, and isolated Online Reader UI.
+Author:       AI Governance Academy
+Author URI:   https://aigovernanceacademy.org/
+Template:     kadence
+Version:      1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 7.4
+License:      GNU General Public License v2 or later
+License URI:  https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  aga-child
+*/
+
+/* All design tokens and component styles live in assets/css/*.css and are enqueued via inc/enqueue.php. */

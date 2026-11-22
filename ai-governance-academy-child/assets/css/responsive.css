@@ -1,0 +1,171 @@
+/**
+ * Mobile-First Responsive Breakpoints: 360, 390, 768, 1024, 1440
+ */
+
+/* <= 374px narrow mobile safeguard (360px target) */
+@media (max-width: 374px) {
+	.aga-brand__title {
+		font-size: 0.95rem;
+	}
+
+	.aga-feature-strip__label {
+		font-size: 0.6rem;
+	}
+
+	.aga-bottom-nav__item {
+		font-size: 0.625rem;
+	}
+}
+
+/* <= 768px mobile bottom navigation spacing & compact hero */
+@media (max-width: 768px) {
+	body.aga-has-mobile-nav {
+		padding-bottom: calc(74px + env(safe-area-inset-bottom));
+	}
+}
+
+/* >= 640px two-column card grids */
+@media (min-width: 640px) {
+	.aga-container {
+		padding-inline: 24px;
+	}
+
+	.aga-feature-strip .aga-container {
+		padding-inline: 24px;
+	}
+
+	.aga-blog-grid,
+	.aga-insights-layout__grid,
+	ul.products,
+	.aga-bookstore-grid,
+	.aga-library-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.aga-site-footer__grid {
+		grid-template-columns: 1.4fr 1fr 1fr;
+	}
+}
+
+/* >= 769px tablet & desktop: show full horizontal header nav, hide mobile bottom nav */
+@media (min-width: 769px) {
+	.aga-site-header__inner {
+		min-height: 70px;
+	}
+
+	.aga-desktop-nav {
+		display: block;
+	}
+
+	.aga-bottom-nav {
+		display: none;
+	}
+
+	.aga-reading-progress {
+		top: 71px;
+	}
+
+	.aga-hero__track,
+	.aga-hero__slide.is-active {
+		min-height: 540px;
+	}
+
+	.aga-hero__scrim {
+		background: linear-gradient(
+			95deg,
+			rgba(11, 45, 35, 0.95) 0%,
+			rgba(18, 59, 46, 0.82) 52%,
+			rgba(11, 45, 35, 0.22) 100%
+		);
+	}
+
+	.aga-feature-strip {
+		padding-block: 24px;
+	}
+
+	.aga-feature-strip__grid {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+
+	.aga-feature-strip__item {
+		padding: 8px 16px;
+	}
+
+	.aga-feature-strip__label {
+		font-size: 0.92rem;
+	}
+
+	.aga-product-detail {
+		grid-template-columns: 320px minmax(0, 1fr);
+		padding: 32px;
+	}
+
+	.aga-reader__toolbar {
+		top: 71px;
+		padding: 12px 24px;
+	}
+
+	.aga-reader__book-title {
+		max-width: 420px;
+	}
+
+	.aga-reader__workspace {
+		grid-template-columns: 280px minmax(0, 1fr);
+	}
+
+	.aga-reader__sidebar {
+		display: block;
+	}
+
+	.aga-reader__sidebar.is-collapsed {
+		display: none;
+	}
+
+	.aga-reader__workspace.is-sidebar-collapsed {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* >= 1024px desktop 3-column insights, bookstore & Tutor LMS grids */
+@media (min-width: 1024px) {
+	.aga-section {
+		padding-block: 52px;
+	}
+
+	.aga-insights-layout__featured .aga-article-card--featured {
+		display: grid;
+		grid-template-columns: 1.15fr 1fr;
+	}
+
+	.aga-insights-layout__featured .aga-article-card__image {
+		height: 100%;
+		aspect-ratio: 16 / 11;
+	}
+
+	.aga-insights-layout__featured .aga-article-card__badge {
+		bottom: 16px;
+		left: 16px;
+	}
+
+	.aga-insights-layout__featured .aga-article-card__body {
+		padding: 28px 32px;
+		justify-content: center;
+	}
+
+	.aga-insights-layout__grid,
+	.aga-blog-grid,
+	ul.products,
+	.aga-bookstore-grid,
+	.aga-library-grid {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 24px;
+	}
+}
+
+/* >= 1440px generous desktop typography */
+@media (min-width: 1440px) {
+	.aga-hero__track,
+	.aga-hero__slide.is-active {
+		min-height: 580px;
+	}
+}

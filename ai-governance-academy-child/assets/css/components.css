@@ -1,0 +1,157 @@
+/**
+ * Shared Components: Cards, Buttons, Badges, Section Titles, Empty States
+ */
+
+.aga-card {
+	background-color: var(--aga-white);
+	border: 1px solid var(--aga-border);
+	border-radius: var(--aga-radius-lg);
+	box-shadow: var(--aga-shadow-card);
+	overflow: hidden;
+}
+
+.aga-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	min-height: 44px;
+	padding: 10px 22px;
+	border-radius: var(--aga-radius-sm);
+	border: 1.5px solid transparent;
+	font-family: var(--aga-font-ui);
+	font-size: 0.9375rem;
+	font-weight: 600;
+	line-height: 1.2;
+	text-decoration: none;
+	white-space: nowrap;
+	transition:
+		background-color var(--aga-transition),
+		color var(--aga-transition),
+		border-color var(--aga-transition),
+		transform var(--aga-transition);
+}
+
+.aga-button:active {
+	transform: scale(0.985);
+}
+
+.aga-button--primary {
+	background-color: var(--aga-gold);
+	border-color: var(--aga-gold);
+	color: var(--aga-deep);
+}
+
+.aga-button--primary:hover {
+	background-color: #c5a15b;
+	border-color: #c5a15b;
+	color: var(--aga-deep);
+}
+
+.aga-button--secondary {
+	background-color: rgba(11, 45, 35, 0.25);
+	border-color: rgba(248, 245, 236, 0.78);
+	color: var(--aga-white);
+	border-radius: 999px;
+}
+
+.aga-button--secondary:hover {
+	background-color: rgba(248, 245, 236, 0.14);
+	border-color: var(--aga-white);
+	color: var(--aga-white);
+}
+
+.aga-button--outline-forest {
+	background-color: transparent;
+	border-color: var(--aga-forest);
+	color: var(--aga-forest);
+}
+
+.aga-button--outline-forest:hover {
+	background-color: var(--aga-sage);
+	color: var(--aga-deep);
+}
+
+.aga-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	padding: 5px 14px;
+	border-radius: 999px;
+	background-color: var(--aga-sage);
+	color: var(--aga-forest);
+	font-size: 0.75rem;
+	font-weight: 600;
+	line-height: 1.25;
+	letter-spacing: 0.01em;
+	white-space: nowrap;
+}
+
+.aga-section-title {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+	margin-bottom: 22px;
+}
+
+.aga-section-title__heading {
+	margin: 0;
+	font-size: clamp(1.45rem, 4.2vw, 2rem);
+	color: var(--aga-forest);
+	white-space: nowrap;
+}
+
+.aga-section-title__rule {
+	flex: 1 1 auto;
+	height: 1px;
+	min-width: 24px;
+	background-color: var(--aga-gold);
+	opacity: 0.7;
+}
+
+.aga-section-title__link {
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+	min-height: 44px;
+	padding-inline: 4px;
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: var(--aga-forest);
+	text-decoration: none;
+	white-space: nowrap;
+	flex-shrink: 0;
+}
+
+.aga-section-title__link:hover {
+	color: var(--aga-gold);
+}
+
+.aga-empty-state {
+	padding: 40px 24px;
+	text-align: center;
+	max-width: 560px;
+	margin-inline: auto;
+}
+
+.aga-empty-state__icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	background-color: var(--aga-sage);
+	color: var(--aga-forest);
+	margin-bottom: 14px;
+}
+
+.aga-empty-state__title {
+	font-size: 1.35rem;
+	margin-bottom: 8px;
+}
+
+.aga-empty-state__message {
+	color: var(--aga-muted);
+	margin-bottom: 20px;
+}

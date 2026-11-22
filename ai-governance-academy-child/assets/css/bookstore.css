@@ -1,0 +1,263 @@
+/**
+ * WooCommerce Bookstore, Book Cards, Single Product, Cart, Checkout & My Account
+ */
+
+.aga-bookstore-shell {
+	padding-block: 24px 48px;
+}
+
+ul.products,
+.aga-bookstore-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.aga-book-card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.aga-book-card__cover-wrap {
+	position: relative;
+	background-color: var(--aga-sage);
+}
+
+.aga-book-card__cover {
+	width: 100%;
+	aspect-ratio: 3 / 4;
+	object-fit: cover;
+}
+
+.aga-book-card__badge-wrap {
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	z-index: 2;
+}
+
+.aga-book-badge--ebook {
+	background-color: var(--aga-forest);
+	color: var(--aga-ivory);
+}
+
+.aga-book-badge--printed {
+	background-color: var(--aga-ivory);
+	color: var(--aga-deep);
+	border: 1px solid var(--aga-gold);
+}
+
+.aga-book-card__body {
+	padding: 18px;
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+	flex: 1 1 auto;
+}
+
+.aga-book-card__title {
+	font-size: 1.15rem;
+	margin: 0;
+	line-height: 1.3;
+}
+
+.aga-book-card__title a {
+	text-decoration: none;
+	color: var(--aga-forest);
+}
+
+.aga-book-card__footer {
+	margin-top: auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding-top: 12px;
+	border-top: 1px solid var(--aga-border);
+}
+
+.aga-book-card__price {
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: var(--aga-forest);
+	font-variant-numeric: tabular-nums;
+}
+
+.aga-book-card__cta {
+	padding: 8px 16px;
+	min-height: 40px;
+	font-size: 0.875rem;
+}
+
+/* Single Book Product */
+.aga-product-detail {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 28px;
+	background-color: var(--aga-white);
+	border: 1px solid var(--aga-border);
+	border-radius: var(--aga-radius-lg);
+	padding: 20px;
+	box-shadow: var(--aga-shadow-card);
+}
+
+.aga-product-detail__media img {
+	width: 100%;
+	aspect-ratio: 3 / 4;
+	object-fit: cover;
+	border-radius: var(--aga-radius-md);
+}
+
+.aga-product-detail__meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 12px;
+}
+
+.aga-product-detail__price {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--aga-forest);
+	font-variant-numeric: tabular-nums;
+	margin-bottom: 16px;
+}
+
+.aga-product-specs {
+	margin: 20px 0;
+	border-top: 1px solid var(--aga-border);
+	border-bottom: 1px solid var(--aga-border);
+	padding-block: 14px;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+	font-size: 0.875rem;
+}
+
+.aga-product-specs dt {
+	color: var(--aga-muted);
+	font-weight: 600;
+}
+
+.aga-product-specs dd {
+	margin: 2px 0 0;
+	color: var(--aga-forest);
+	font-weight: 600;
+}
+
+body.aga-book-ebook .aga-product-detail__format-note {
+	background-color: var(--aga-sage);
+	color: var(--aga-forest);
+	padding: 12px 16px;
+	border-radius: var(--aga-radius-sm);
+	font-size: 0.9rem;
+	margin-bottom: 18px;
+}
+
+body.aga-book-printed .aga-product-detail__format-note {
+	background-color: var(--aga-ivory);
+	border: 1px solid var(--aga-gold);
+	color: var(--aga-deep);
+	padding: 12px 16px;
+	border-radius: var(--aga-radius-sm);
+	font-size: 0.9rem;
+	margin-bottom: 18px;
+}
+
+/* WooCommerce Cart, Checkout & My Account */
+.woocommerce-cart .woocommerce,
+.woocommerce-checkout .woocommerce,
+.woocommerce-account .woocommerce,
+.aga-wc-panel {
+	background-color: var(--aga-white);
+	border: 1px solid var(--aga-border);
+	border-radius: var(--aga-radius-lg);
+	padding: 20px;
+	box-shadow: var(--aga-shadow-card);
+}
+
+.woocommerce table.shop_table,
+.aga-wc-table {
+	width: 100%;
+	border-collapse: collapse;
+	font-variant-numeric: tabular-nums;
+}
+
+.woocommerce table.shop_table th,
+.woocommerce table.shop_table td,
+.aga-wc-table th,
+.aga-wc-table td {
+	padding: 12px 10px;
+	text-align: left;
+	border-bottom: 1px solid var(--aga-border);
+}
+
+.woocommerce table.shop_table th,
+.aga-wc-table th {
+	color: var(--aga-forest);
+	font-family: var(--aga-font-heading);
+	font-size: 0.9rem;
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row select,
+.woocommerce form .form-row textarea,
+.aga-input {
+	width: 100%;
+	min-height: 44px;
+	padding: 10px 14px;
+	border: 1px solid var(--aga-border);
+	border-radius: var(--aga-radius-sm);
+	background-color: var(--aga-ivory);
+	color: var(--aga-text);
+}
+
+.woocommerce-MyAccount-navigation ul,
+.aga-account-nav {
+	list-style: none;
+	margin: 0 0 20px;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.woocommerce-MyAccount-navigation li a,
+.aga-account-nav a,
+.aga-account-nav button {
+	display: inline-flex;
+	align-items: center;
+	min-height: 40px;
+	padding: 8px 16px;
+	border-radius: var(--aga-radius-sm);
+	border: 1px solid var(--aga-border);
+	background-color: var(--aga-ivory);
+	color: var(--aga-forest);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.woocommerce-MyAccount-navigation li.is-active a,
+.aga-account-nav .is-active {
+	background-color: var(--aga-forest);
+	border-color: var(--aga-forest);
+	color: var(--aga-ivory);
+}
+
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit {
+	background-color: var(--aga-gold);
+	color: var(--aga-deep);
+	border-radius: var(--aga-radius-sm);
+	font-weight: 600;
+	border: 0;
+	min-height: 44px;
+	padding: 10px 20px;
+}

@@ -1,0 +1,132 @@
+/**
+ * Tutor LMS Visual Styling (CSS-First Integration)
+ * Maps Tutor LMS components strictly onto AGA tokens without per-plugin colors.
+ */
+
+.tutor-wrap,
+.aga-tutor-shell {
+	--tutor-color-primary: var(--aga-forest);
+	--tutor-color-primary-hover: var(--aga-deep);
+	--tutor-body-color: var(--aga-text);
+	--tutor-border-color: var(--aga-border);
+	padding-block: 24px 48px;
+}
+
+.tutor-course-card,
+.aga-course-card {
+	background-color: var(--aga-white);
+	border: 1px solid var(--aga-border);
+	border-radius: var(--aga-radius-lg);
+	box-shadow: var(--aga-shadow-card);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.tutor-course-card .tutor-card-title a,
+.aga-course-card__title {
+	font-family: var(--aga-font-heading);
+	color: var(--aga-forest);
+	text-decoration: none;
+}
+
+.tutor-btn-primary,
+.tutor-button-primary {
+	background-color: var(--aga-gold) !important;
+	border-color: var(--aga-gold) !important;
+	color: var(--aga-deep) !important;
+	border-radius: var(--aga-radius-sm) !important;
+	font-weight: 600 !important;
+	min-height: 44px;
+}
+
+.tutor-dashboard-left-menu,
+.aga-tutor-sidebar {
+	background-color: var(--aga-white);
+	border: 1px solid var(--aga-border);
+	border-radius: var(--aga-radius-md);
+	padding: 12px;
+}
+
+.tutor-dashboard-permalinks,
+.aga-tutor-sidebar__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.tutor-dashboard-menu-item-link,
+.aga-tutor-sidebar__link {
+	display: flex;
+	align-items: center;
+	min-height: 44px;
+	padding: 8px 14px;
+	border-radius: var(--aga-radius-sm);
+	color: var(--aga-text);
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.tutor-dashboard-menu-item.active .tutor-dashboard-menu-item-link,
+.aga-tutor-sidebar__link.is-active {
+	background-color: var(--aga-forest);
+	color: var(--aga-ivory);
+}
+
+.tutor-progress-bar,
+.aga-progress-bar {
+	width: 100%;
+	height: 8px;
+	border-radius: 999px;
+	background-color: var(--aga-sage);
+	overflow: hidden;
+}
+
+.tutor-progress-filled,
+.aga-progress-bar__fill {
+	height: 100%;
+	background-color: var(--aga-gold);
+	border-radius: 999px;
+}
+
+.tutor-course-topic,
+.aga-lesson-module {
+	background-color: var(--aga-white);
+	border: 1px solid var(--aga-border);
+	border-radius: var(--aga-radius-md);
+	overflow: hidden;
+	margin-bottom: 14px;
+}
+
+.tutor-course-topic-title,
+.aga-lesson-module__header {
+	background-color: var(--aga-sage);
+	color: var(--aga-forest);
+	font-family: var(--aga-font-heading);
+	font-weight: 700;
+	padding: 14px 18px;
+}
+
+.tutor-quiz-wrap,
+.aga-quiz-card {
+	background-color: var(--aga-white);
+	border: 1px solid var(--aga-border);
+	border-radius: var(--aga-radius-lg);
+	padding: 20px;
+	box-shadow: var(--aga-shadow-card);
+}
+
+.aga-quiz-option {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	min-height: 44px;
+	padding: 10px 14px;
+	border: 1px solid var(--aga-border);
+	border-radius: var(--aga-radius-sm);
+	background-color: var(--aga-ivory);
+	margin-bottom: 8px;
+}

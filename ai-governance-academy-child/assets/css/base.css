@@ -1,0 +1,165 @@
+/**
+ * AGA Design Tokens & Base Typography
+ *
+ * Strictly defines the AI Governance Academy visual token system.
+ * All components and plugin integrations must consume these variables only.
+ */
+
+:root {
+	--aga-forest: #123B2E;
+	--aga-deep: #0B2D23;
+	--aga-ivory: #F8F5EC;
+	--aga-sage: #E8EFE9;
+	--aga-gold: #B9954F;
+	--aga-text: #263B33;
+	--aga-muted: #60736A;
+	--aga-border: #E3E8E2;
+	--aga-white: #ffffff;
+
+	--aga-radius-sm: 8px;
+	--aga-radius-md: 14px;
+	--aga-radius-lg: 20px;
+
+	--aga-content-width: 1180px;
+	--aga-reading-width: 820px;
+
+	--aga-shadow-card: 0 12px 36px rgba(11, 45, 35, 0.08);
+
+	--aga-font-heading: 'Playfair Display', 'Noto Serif Bengali', Georgia, 'Times New Roman', serif;
+	--aga-font-body: 'Source Serif 4', 'Noto Serif Bengali', 'Hind Siliguri', Georgia, serif;
+	--aga-font-ui: 'Source Serif 4', 'Hind Siliguri', 'Noto Serif Bengali', Georgia, serif;
+
+	--aga-transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	overflow-x: clip;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background-color: var(--aga-ivory);
+	color: var(--aga-text);
+	font-family: var(--aga-font-body);
+	font-size: 1rem;
+	line-height: 1.65;
+	overflow-x: clip;
+	-webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
+img {
+	height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+	color: var(--aga-forest);
+	font-family: var(--aga-font-heading);
+	font-weight: 700;
+	line-height: 1.2;
+	text-wrap: balance;
+}
+
+p {
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+a {
+	color: var(--aga-forest);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+	transition: color var(--aga-transition), opacity var(--aga-transition);
+}
+
+a:hover {
+	color: var(--aga-deep);
+}
+
+button,
+input,
+select,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+:focus-visible {
+	outline: 2px solid var(--aga-gold);
+	outline-offset: 2px;
+}
+
+.aga-tabular {
+	font-variant-numeric: tabular-nums;
+}
+
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: var(--aga-ivory);
+	clip: auto !important;
+	clip-path: none;
+	color: var(--aga-deep);
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 600;
+	height: auto;
+	left: 8px;
+	line-height: normal;
+	padding: 12px 18px;
+	text-decoration: none;
+	top: 8px;
+	width: auto;
+	z-index: 100000;
+	border-radius: var(--aga-radius-sm);
+	box-shadow: var(--aga-shadow-card);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}

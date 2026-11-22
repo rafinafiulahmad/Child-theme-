@@ -1,0 +1,46 @@
+# Copyright (C) 2026 AI Governance Academy
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: AI Governance Academy Child 1.0.0\n"
+"Report-Msgid-Bugs-To: https://aigovernanceacademy.org/\n"
+"POT-Creation-Date: 2026-11-22 15:45+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2026-11-22 15:45+0000\n"
+"Last-Translator: AI Governance Academy\n"
+"Language-Team: English\n"
+"X-Domain: aga-child\n"
+
+#: inc/template-functions.php
+msgid "AI Governance Academy"
+msgstr ""
+
+#: template-parts/home/hero-slider.php
+msgid "Explore Our Books"
+msgstr ""
+
+#: template-parts/home/hero-slider.php
+msgid "Join Our Learning Programs"
+msgstr ""
+
+#: template-parts/home/latest-insights.php
+msgid "Latest Insights"
+msgstr ""
+
+#: template-parts/home/latest-insights.php
+msgid "View All"
+msgstr ""
+
+#: template-parts/bookstore/book-card.php
+msgid "View book"
+msgstr ""
+
+#: inc/integrations/woocommerce.php
+msgid "eBook"
+msgstr ""
+
+#: inc/integrations/woocommerce.php
+msgid "Printed"
+msgstr ""

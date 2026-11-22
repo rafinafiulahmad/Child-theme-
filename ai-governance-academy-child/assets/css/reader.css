@@ -1,0 +1,193 @@
+/**
+ * Isolated Online Reader & Reading Library UI Scope
+ *
+ * All reader typography, theme surfaces, and layout rules are strictly scoped
+ * under .aga-reader and .aga-reader .aga-reader-content so styles never leak
+ * into standard blog posts or pages.
+ */
+
+.aga-library-main {
+	padding-block: 16px 48px;
+}
+
+.aga-library-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+}
+
+.aga-reader {
+	--reader-bg: var(--aga-ivory);
+	--reader-surface: var(--aga-white);
+	--reader-text: var(--aga-text);
+	--reader-heading: var(--aga-forest);
+	--reader-muted: var(--aga-muted);
+	--reader-border: var(--aga-border);
+	--reader-font-size: 18px;
+
+	background-color: var(--reader-bg);
+	color: var(--reader-text);
+	min-height: calc(100vh - 60px);
+	display: flex;
+	flex-direction: column;
+}
+
+.aga-reader[data-reader-theme="ivory"] {
+	--reader-bg: var(--aga-ivory);
+	--reader-surface: var(--aga-white);
+	--reader-text: var(--aga-text);
+	--reader-heading: var(--aga-forest);
+	--reader-muted: var(--aga-muted);
+	--reader-border: var(--aga-border);
+}
+
+.aga-reader[data-reader-theme="sepia"] {
+	--reader-bg: #efe6d5;
+	--reader-surface: #f7f0e2;
+	--reader-text: #3a2e21;
+	--reader-heading: #231910;
+	--reader-muted: #6e5c48;
+	--reader-border: #dfd1b8;
+}
+
+.aga-reader[data-reader-theme="dark"] {
+	--reader-bg: var(--aga-deep);
+	--reader-surface: #10372b;
+	--reader-text: var(--aga-ivory);
+	--reader-heading: var(--aga-gold);
+	--reader-muted: rgba(248, 245, 236, 0.72);
+	--reader-border: rgba(248, 245, 236, 0.16);
+}
+
+.aga-reader__toolbar {
+	position: sticky;
+	top: 58px;
+	z-index: 30;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	padding: 10px 16px;
+	background-color: var(--reader-surface);
+	border-bottom: 1px solid var(--reader-border);
+}
+
+.aga-reader__toolbar-left,
+.aga-reader__toolbar-right,
+.aga-reader__font-controls,
+.aga-reader__theme-controls {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.aga-reader__book-title {
+	font-family: var(--aga-font-heading);
+	font-weight: 700;
+	font-size: 0.95rem;
+	color: var(--reader-heading);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 220px;
+}
+
+.aga-reader__btn,
+.aga-reader__theme-chip {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	min-height: 40px;
+	padding: 6px 12px;
+	border-radius: var(--aga-radius-sm);
+	border: 1px solid var(--reader-border);
+	background-color: var(--reader-bg);
+	color: var(--reader-heading);
+	font-size: 0.875rem;
+	font-weight: 600;
+}
+
+.aga-reader__theme-chip.is-active {
+	background-color: var(--aga-gold);
+	border-color: var(--aga-gold);
+	color: var(--aga-deep);
+}
+
+.aga-reader__workspace {
+	display: grid;
+	grid-template-columns: 1fr;
+	flex: 1 1 auto;
+	position: relative;
+}
+
+.aga-reader__sidebar {
+	display: none;
+	background-color: var(--reader-surface);
+	border-right: 1px solid var(--reader-border);
+	padding: 20px 16px;
+}
+
+.aga-reader__sidebar.is-open {
+	display: block;
+}
+
+.aga-reader__sidebar-header h2 {
+	font-size: 1.05rem;
+	color: var(--reader-heading);
+	margin-bottom: 14px;
+}
+
+.aga-reader__chapters {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.aga-reader__chapters a,
+.aga-reader__chapters button {
+	display: flex;
+	width: 100%;
+	text-align: left;
+	padding: 10px 12px;
+	border: 0;
+	border-radius: var(--aga-radius-sm);
+	background: transparent;
+	color: var(--reader-text);
+	text-decoration: none;
+	font-size: 0.925rem;
+}
+
+.aga-reader__chapters .is-active {
+	background-color: var(--aga-sage);
+	color: var(--aga-deep);
+	font-weight: 700;
+}
+
+.aga-reader .aga-reader-content {
+	max-width: var(--aga-reading-width);
+	width: 100%;
+	margin-inline: auto;
+	padding: 28px 20px 64px;
+	font-family: var(--aga-font-body);
+	font-size: var(--reader-font-size);
+	line-height: 1.82;
+	color: var(--reader-text);
+}
+
+.aga-reader .aga-reader-content h1,
+.aga-reader .aga-reader-content h2,
+.aga-reader .aga-reader-content h3 {
+	color: var(--reader-heading);
+	margin-top: 1.6em;
+	margin-bottom: 0.6em;
+}
+
+.aga-reader .aga-reader-content h1 {
+	margin-top: 0;
+	font-size: 1.9em;
+}

@@ -1,0 +1,8 @@
+{
+  "name": "AI Governance Academy",
+  "description": "Production Kadence child theme for AI Governance Academy featuring editorial insights, WooCommerce bookstore, Tutor LMS styling, and isolated online reader UI.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
